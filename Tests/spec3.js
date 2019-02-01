@@ -60,8 +60,8 @@ describe('Login with DB connection', () => {
         //fetch the data from database
 
         db.any(`select firstname,lastname,email 
-        from users
-        where email ='efewtrell8c@craigslist.org'`)
+                from users
+                 where email ='efewtrell8c@craigslist.org'`)
          .then((result) => {
              //console.log(result.length)
              username=result[0].email;

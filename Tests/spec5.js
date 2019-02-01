@@ -21,13 +21,13 @@ describe('Login with DB Connection', () => {
         //Fetch the data from database
 
         db.any(queries.q2)
-        .then(function(result){
-            arr=result;
-            //console.log(result.length);
-            username = result[0].email;
-            //console.log(username);
-            pass = result[0].firstname.toLowerCase()+result[0].lastname.toLowerCase();
-            //console.log(pass);
+             .then(function(result){
+                arr=result;
+                //console.log(result.length);
+                username = result[0].email;
+                //console.log(username);
+                pass = result[0].firstname.toLowerCase()+result[0].lastname.toLowerCase();
+                //console.log(pass);
 
         }).catch(function(error){
             console.log(error);
